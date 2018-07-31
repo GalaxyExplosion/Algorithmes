@@ -22,6 +22,7 @@ class TwoSum: NSObject {
             map.updateValue(index, forKey: nums[index])
         }
         
+        print(res);
         return res;
     }
     
