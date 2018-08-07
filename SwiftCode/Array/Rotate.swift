@@ -9,7 +9,7 @@
 import UIKit
 
 class Rotate: NSObject {
-    public static func rotate(_ nums: inout [Int], _ k: Int) {
+    func rotate(_ nums: inout [Int], _ k: Int) {
         //1
         // let x = k % nums.count;
         // let res = nums;
@@ -34,13 +34,13 @@ class Rotate: NSObject {
         } else if (k < nums.count) {
             i = k;
         }
+        
         reverse(&nums, 0, nums.count - i - 1);
         reverse(&nums, nums.count - i, nums.count - 1);
         reverse(&nums, 0, nums.count - 1);
-        print(nums);
     }
     
-    public static func reverse(_ nums: inout [Int], _ start: Int, _ end: Int) {
+    func reverse(_ nums: inout [Int], _ start: Int, _ end: Int) {
         var s = start
         var e = end
         while s < e {

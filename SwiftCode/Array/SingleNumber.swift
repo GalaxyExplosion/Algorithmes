@@ -9,7 +9,7 @@
 import UIKit
 
 class SingleNumber: NSObject {
-    public static func singleNumber(_ nums: [Int]) -> Int {
+    func singleNumber(_ nums: [Int]) -> Int {
         var temp = 0;
         for item in nums {
             temp ^= item;

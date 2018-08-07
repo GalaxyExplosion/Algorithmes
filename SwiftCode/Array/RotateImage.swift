@@ -9,7 +9,7 @@
 import UIKit
 
 class RotateImage: NSObject {
-    public static func rotate(_ matrix: inout [[Int]]) {
+    func rotate(_ matrix: inout [[Int]]) {
         let n = matrix.count;
         for i in 0..<n-1 {
             for j in 0..<n-i {

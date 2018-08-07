@@ -9,7 +9,7 @@
 import UIKit
 
 class Intersect: NSObject {
-    public static func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
         let len1 = nums1.count;
         let len2 = nums2.count;
         let len = len1 > len2 ? len2 : len1;

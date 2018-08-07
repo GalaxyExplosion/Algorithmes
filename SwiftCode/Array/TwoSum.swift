@@ -9,8 +9,7 @@
 import UIKit
 
 class TwoSum: NSObject {
-    
-    public static func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         var map: Dictionary<Int, Int> = Dictionary<Int, Int>();
         var res: Array<Int> = Array<Int>();
         for index in 0..<nums.count {
@@ -22,7 +21,6 @@ class TwoSum: NSObject {
             map.updateValue(index, forKey: nums[index])
         }
         
-        print(res);
         return res;
     }
     

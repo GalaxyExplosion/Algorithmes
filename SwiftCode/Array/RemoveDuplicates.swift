@@ -10,7 +10,7 @@ import UIKit
 
 class RemoveDuplicates: NSObject {
     
-    public static func removeDuplicates(_ nums: inout [Int]) -> Int {
+    func removeDuplicates(_ nums: inout [Int]) -> Int {
         if nums.count == 0 { return 0; }
         var i: Int = 0;
         for j in 1..<nums.count {
@@ -19,7 +19,7 @@ class RemoveDuplicates: NSObject {
                 nums[i] = nums[j];
             }
         }
-        print(i);
+
         return i + 1;
     }
     

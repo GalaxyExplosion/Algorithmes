@@ -9,8 +9,7 @@
 import UIKit
 
 class MaxProfit: NSObject {
-    
-    public static func maxProfit(_ prices: [Int]) -> Int {
+    func maxProfit(_ prices: [Int]) -> Int {
         var sum = 0;
         var i = 1;
         while i < prices.count {
@@ -21,7 +20,6 @@ class MaxProfit: NSObject {
             i+=1;
         }
 
-        print(sum);
         return sum;
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class PlusOne: NSObject {
-    public static func plusOne(_ digits: [Int]) -> [Int] {
+    func plusOne(_ digits: [Int]) -> [Int] {
         var res = digits;
         var carry = 1;
         for (i, e) in digits.enumerated().reversed() {

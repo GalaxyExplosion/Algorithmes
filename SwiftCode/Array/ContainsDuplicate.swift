@@ -9,7 +9,7 @@
 import UIKit
 
 class ContainsDuplicate: NSObject {
-    public static func containsDuplicate(_ nums: [Int]) -> Bool {
+    func containsDuplicate(_ nums: [Int]) -> Bool {
         var set = Set<Int>();
         for i in 0..<nums.count {
             if (!set.contains(nums[i])) {
