@@ -10,29 +10,23 @@ import UIKit
 
 class CountAndSay: NSObject {
     func countAndSay(_ n: Int) -> String {
-        var s1 = "1";
-        var s2 = "";
-        var n = n
-        while n > 0 {
-            n -= 1;
-            for var i in 0..<s1.count {
-                for var j in 0..<Int(Int32.max) {
-                    let chars1 = [Character](s1);
-                    if i + j < s1.count && chars1[i + j] == chars1[i + j + 1] {
-                        continue
-                    }
-                    j += 1;
-                    s2 = s2 + "\(j)";
-                    s2.append(chars1[i]);
-                    i = j + i - 1;
-                    break;
-                 }
+        if n == 1 { return "1"; }
+        let s = countAndSay(n - 1) + "*";
+        let c = [Character](s);
+        var temp = "";
+        var count = 1;
+        for i in 0..<c.count - 1 {
+            if (c[i] == c[i + 1]) {
+                count += 1;
+            } else {
+                temp = temp + "\(count)\(c[i])";
+                count = 1;
             }
-            s1 = s2;
-            s2 = "";
         }
-        return s1;
+        
+        return temp;
     }
     
  
 }
+
