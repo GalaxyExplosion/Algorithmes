@@ -1,2 +1,2 @@
 # Algorithmes
-swfit实现的算法
+ 常见的算法
